@@ -158,13 +158,28 @@ ul {
     overflow: hidden;
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--hero-logo-url);
+    background-repeat: no-repeat;
+    background-position: center 85%;
+    background-size: min(92vw, 800px);
+    opacity: 0.4;
+    pointer-events: none;
+    animation: heroLogoFloatSafe 4s ease-in-out infinite;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+}
+
 .hero-content {
     position: relative;
     z-index: 1;
     max-width: 1100px;
 }
 
-@keyframes heroLogoFloat {
+@keyframes heroLogoFloatSafe {
     0%,
     100% {
         transform: translate3d(0, 0, 0);
@@ -879,7 +894,11 @@ ul {
         padding-top: 120px;
     }
 
-    /* Hero logo background is applied inline in Home.js */
+    .hero::before {
+        background-position: center 78%;
+        background-size: min(96vw, 560px);
+        opacity: 0.2;
+    }
 
     .page-header {
         padding: 7rem 0 3rem;
@@ -959,7 +978,11 @@ ul {
         font-size: 2rem;
     }
 
-    /* Hero logo background is applied inline in Home.js */
+    .hero::before {
+        background-position: center 82%;
+        background-size: min(96vw, 520px);
+        opacity: 0.22;
+    }
 
     .services-grid,
     .contact-info {

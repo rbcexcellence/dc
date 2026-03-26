@@ -7,12 +7,7 @@ const Home = () => {
       {/* Hero Section */}
       <section
         className="hero"
-        style={{
-          backgroundImage: "url('/logonb.png')",
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center 85%',
-          backgroundSize: 'min(92vw, 800px)',
-        }}
+        style={{ '--hero-logo-url': "url('/logonb.png')" }}
       >
         <div className="hero-content">
           <h1>Willkommen bei Dushi's Coiffeur</h1>
