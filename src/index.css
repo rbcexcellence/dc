@@ -44,7 +44,13 @@ body {
     overflow-x: clip;
 }
 
-* {
+/* Only needed for flex/grid items; applying to all elements can cause layout quirks */
+.navbar .container > *,
+.services-grid > *,
+.social-access-grid > *,
+.contact-container > *,
+.map-grid > *,
+.footer-grid > * {
     min-width: 0;
 }
 
@@ -443,9 +449,12 @@ ul {
 }
 
 .page-header h1 {
-    font-size: 3rem;
+    font-size: clamp(1.9rem, 7vw, 3rem);
     color: var(--gold);
     margin-bottom: 1rem;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .page-header p {
@@ -878,6 +887,15 @@ ul {
         opacity: 0.2;
     }
 
+    .page-header {
+        padding: 7rem 0 3rem;
+    }
+
+    .page-header .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
     .service-item {
         flex-direction: column;
         align-items: center;
@@ -956,5 +974,9 @@ ul {
     .services-grid,
     .contact-info {
         grid-template-columns: 1fr;
+    }
+
+    .page-header h1 {
+        font-size: clamp(1.7rem, 8.6vw, 2.2rem);
     }
 }
