@@ -158,23 +158,6 @@ ul {
     overflow: hidden;
 }
 
-.hero-logo-background {
-    position: absolute;
-    inset: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center 85%;
-    background-size: min(92vw, 800px);
-    opacity: 0.4;
-    pointer-events: none;
-    animation: heroLogoFloat 4s ease-in-out infinite;
-    will-change: transform;
-    clip-path: inset(0);
-    contain: paint;
-}
-
 .hero-content {
     position: relative;
     z-index: 1;
@@ -896,11 +879,7 @@ ul {
         padding-top: 120px;
     }
 
-    .hero-logo-background {
-        background-position: center 78%;
-        background-size: min(96vw, 560px);
-        opacity: 0.2;
-    }
+    /* Hero logo background is applied inline in Home.js */
 
     .page-header {
         padding: 7rem 0 3rem;
@@ -980,11 +959,7 @@ ul {
         font-size: 2rem;
     }
 
-    .hero-logo-background {
-        background-position: center 82%;
-        background-size: min(96vw, 520px);
-        opacity: 0.22;
-    }
+    /* Hero logo background is applied inline in Home.js */
 
     .services-grid,
     .contact-info {
