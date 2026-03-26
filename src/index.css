@@ -29,6 +29,10 @@ body {
     max-width: 100%;
 }
 
+html {
+    overflow-x: clip;
+}
+
 /* Prevent horizontal scrolling caused by long words/URLs or wide flex/grid children */
 body {
     overflow-wrap: anywhere;
@@ -832,7 +836,7 @@ ul {
 
     .nav-menu {
         position: fixed;
-        left: -100%;
+        left: 0;
         top: 70px;
         flex-direction: column;
         background-color: var(--black);
@@ -841,10 +845,11 @@ ul {
         transition: 0.3s;
         padding: 2rem 0;
         border-top: 1px solid var(--gold);
+        transform: translateX(-100%);
     }
 
     .nav-menu.active {
-        left: 0;
+        transform: translateX(0);
     }
 
     .hero-content h1 {
