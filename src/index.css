@@ -29,6 +29,21 @@ body {
     max-width: 100%;
 }
 
+/* Prevent horizontal scrolling caused by long words/URLs or wide flex/grid children */
+body {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.App {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+* {
+    min-width: 0;
+}
+
 img,
 iframe {
     max-width: 100%;
@@ -157,7 +172,7 @@ ul {
     margin-bottom: 1rem;
     color: var(--gold);
     font-weight: 700;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 .hero-content p {
