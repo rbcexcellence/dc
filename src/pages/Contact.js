@@ -24,6 +24,7 @@ const Contact = () => {
                 <input type="hidden" name="_subject" value="Neue Kontaktanfrage von Dushi Coiffeur Website" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_next" value={`${window.location.origin}/contact/danke`} />
                 <input type="text" name="_honey" style={{display: 'none'}} />
                 
                 <div className="form-group">
